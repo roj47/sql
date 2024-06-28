@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>The form element</h1>
+
+    <form action="/login" method="post">
+     <div class="container">
+
+      <label for="label">username:</label>
+      <input type="text" id="fname" name="username"><br><br>
+      <label for="lname">password:</label>
+      <input type="text" id="lname" name="password"><br><br>
+      <input type="submit" value="Submit">
+     </div>
+     <script>
+        if(document.location.hash === '#unauthorized') {
+     document.write('<div class=“unauthorized”>Invalid Username or Password</div>');
+        } else if(document.location.hash === '#error') {
+     document.write('<div class=“error”>An error has occured</div>');
+        }
+      </script>
+     
+    </form>
+    
+    <p>Click the "Submit" button and the form-data will be sent to a page on the 
+    server called "action_page.php".</p>
+
+
+
+</body>
+</html>
